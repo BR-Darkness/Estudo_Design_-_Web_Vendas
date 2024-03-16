@@ -2,7 +2,7 @@
 
 <p align="center"><img src="docs/imagens/Logo.png" alt="Logo do Projeto" width="64px"></p>
 
-<h1 align="center">Projeto: Nome do Projeto</h1>
+<h1 align="center">Projeto de Estudo: Agência  Web Vendas</h1>
 
 <br>
 
