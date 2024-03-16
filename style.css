@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+*
+{
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html
+{
+    scroll-padding-top: 120px;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    /* font-family: Arial, sans-serif; */
+    font-family: "Poppins";
+    line-height: 1.5;
+}
+
+:root
+{
+    --Main-Color: #506e3a;
+    --Sub-Color: #007983;
+    --Block-Color:  #9bd57220 ;
+}
+
+::selection
+{
+    background-color: #3568b140;
+}
+
+h2
+{
+    color: var(--Sub-Color);
+    font-size: 28px;
+    margin-bottom: 1em;
+}
+
+.separator-top /*hr classes*/
+{
+    background-color: var(--Sub-Color);
+    width: 75%;
+    border: 8px solid var(--Sub-Color);
+    transform: translateY(-8px);
+    margin: auto;
+}
+
+.separator-botton /*hr classes*/
+{
+    background-color: var(--Sub-Color);
+    width: 75%;
+    border: 8px solid var(--Sub-Color);
+    transform: translateY(8px);
+    margin: auto;
+}
+
+.container
+{
+    width: 100%;
+}
+
+.container>*
+{
+    max-width: 1600px;
+    margin: auto;
+}
+
+.main-color
+{
+    background-color: var(--Main-Color);
+}
+
+#Sobre, #Servicos
+{
+    background-color: var(--Block-Color);
+}
+
+.button
+{
+    font-weight: 700;
+    border-radius: 8px;
+    margin: 1em 0;
+    display: inline-block;
+    background: var(--Sub-Color);
+    box-shadow: 0 0 0px 1px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.card a:hover, .button:hover, .contato-form input[type="submit"]:hover
+{
+    cursor: pointer;
+    scale: 1.05;
+    transition: all 0.3s cubic-bezier(.25, .25, .25, 1);
+}
+
+.flex-nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.grid
+{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin: 2em 1em;
+}
+
+/* -----  ----- Menu -----  ----- */
+
+header
+{
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+#Menu
+{
+    align-items: center;
+    background-color: var(--Main-Color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-between;
+    max-height: 100px;
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+}
+
+#Logo
+{
+    color: #f1f1f1;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Poppins";
+}
+
+#Menu-Itens ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25em;
+}
+
+#Menu-Itens a
+{
+    border-radius: 8px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+#Logo:hover, #Menu-Itens a:hover
+{
+    transition: 0.25s;
+    color: #9ddc72;
+}
+
+/* -----  ----- Serviços -----  ----- */
+
+.presentation
+{
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding: 4em 2em;
+    width: 100%;
+    height: 600px;
+    transition: .15s;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+#presentation
+{
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.presentation-content
+{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center; 
+    margin: 1em 0;
+}
+
+.presentation-content ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    font-style: italic;
+    font-weight: 700;
+    gap:  1em 2em;
+    padding: 2em 0;
+}
+
+.presentation-content li
+{
+    color: var(--Sub-Color);
+    background-color: #fff;
+    padding: .25em .5em;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.presentation-img
+{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-position: center;
+    animation: Test 1.5s infinite;
+    box-shadow: 0 0 0 2px var(--Sub-Color);
+    background-color: var(--Block-Color);
+    background-image: url("img/image.jpg");
+    background-size: cover;
+}
+
+/* Animation Keyframes*/
+@keyframes Test 
+{
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(8px); }
+    100% { transform: translateY(0px); }
+}
+
+.presentation h1
+{
+    font-size: clamp(24px, 3vw, 39px);
+    /* text-transform: uppercase; */
+    text-wrap: balance;
+}
+
+/* -----  ----- Serviços -----  ----- */
+
+.servicos
+{
+    padding: 4em 1em;
+    width: 100%;
+}
+
+.card
+{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(1, 26, 66, 0.25);
+    display: flex;
+    flex-direction: column;    
+    padding: 1em;
+}
+
+.card h3
+{
+    align-items: center;
+    color: var(--Sub-Color);
+    display: flex;
+    gap: 1em;
+}
+
+.card p
+{
+    font-family: "Open Sans";
+    height: 100%;
+    margin: 2em 0;
+    text-align: justify;
+}
+
+.card a
+{
+    align-self: end;
+    background-color: var(--Main-Color);
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+/* -----  ----- Projetos -----  ----- */
+
+.projetos
+{
+    padding: 4em 2em;
+}
+
+.projetos figure
+{
+    position: relative;
+}
+
+.projetos img
+{
+    background-color: #111;
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid #282828;
+    box-shadow: 0 0 0 1px #565656;
+    box-sizing: content-box;
+    display: block;
+    margin: auto;
+    max-width: 375px;
+    object-fit: contain;
+    padding: .25em .5rem;
+    width: 80%;
+}
+
+.projetos .figbar
+{
+    background-color: #222;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 4px 0px rgba(1, 26, 66, 0.25);
+    margin-bottom: .5em;
+    padding: .5em .25em;
+    width: 100%;
+}
+
+.projetos figcaption
+{
+    color: var(--Sub-Color);
+    font-family: "Open Sans";
+    font-weight: 700;
+    text-align: center;
+}
+
+/* -----  ----- Contato -----  ----- */
+
+.contato
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4em 2em;
+    justify-content: space-between;
+    gap: 2em 4em;
+}
+
+.contato-sobre
+{
+    max-width: 600;
+    flex: 350px;
+}
+
+.contato-sobre h3
+{
+    margin: 1em 0;
+}
+
+.contato-sobre span
+{
+    background-color: var(--Main-Color);
+    border-radius: 8px;
+    color: #fff;
+    padding: 0 .25em;
+}
+
+.contato-sobre p
+{
+    text-align: justify;
+}
+
+/* -----  ----- Form -----  ----- */
+
+.contato-form
+{
+    flex: 350px;
+}
+
+.contato-form label
+{
+    font-weight: 600;
+}
+
+.contato-form input, .contato-form textarea
+{
+    border: 2px solid var(--Main-Color);
+    font-family: "Open Sans";
+    border-radius: 8px;
+    padding: .5em;
+    margin: .75em 0;
+    resize: none;
+}
+
+.contato-form input[type="submit"]
+{
+    background-color: var(--Main-Color);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 2em auto;
+    padding: 10px 15px;
+    width: 90%;
+}
+
+/* -----  ----- Footer -----  ----- */
+
+footer
+{
+    align-items: center;
+    background-color: var(--Main-Color);
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75em 1em;
+    justify-content: space-evenly;
+    padding: 2em;
+    width: 100%;
+}
+
+footer a
+{
+    background-color: var(--Sub-Color);
+    border-radius: 8px;
+    color: #fff;
+    padding: .25em .75em;
+    text-decoration: none;
+}
+
+.footer-button
+{
+    background-color: var(--Sub-Color);
+    box-shadow: #14141480 1px 1px 4px;
+    border: 2px solid #f1f1f1;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+
+    position: fixed;
+    margin: 1em;
+    bottom: 0;
+    right: 0;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* -----  ----- Mobile -----  ----- */
+
+@media screen and (max-width: 950px) 
+{
+    .presentation-img
+    {
+        width: min(200px, 100%);
+        height: min(200px, 100%);
+    }
+}
+
+@media screen and (max-width: 850px) 
+{
+    .presentation
+    {
+        padding: 2em 2em;
+    }
+    
+    .presentation-content
+    {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+    }
+
+    .presentation-content h1
+    {
+        max-width: 600px;
+    }
+
+    .presentation-content ul
+    {
+        justify-content: center;
+        font-size: 10px;
+        max-width: 750px;
+    }
+
+    .grid
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) 
+{
+    #Logo
+    {
+        font-size: 24px;
+        display: none;
+    }
+
+    #Menu
+    {
+        max-height: none;
+        justify-content: space-evenly;
+        padding: 1em 0em;
+    }
+
+    #Menu a
+    {
+        font-size: 14px;
+    }
+
+    .presentation
+    {
+        height: 400px;
+    }
+
+    .presentation-img
+    {
+        display: none;
+    }
+}
+
+/* -----  ----- ScrollBar -----  ----- */
+
+::-webkit-scrollbar 
+{
+    height: 0.75em;
+    width: 1em;
+}
+
+::-webkit-scrollbar-track 
+{
+    background: #f1f1f1;
+    border: 1px solid #aba;
+}
+   
+::-webkit-scrollbar-thumb 
+{
+    box-sizing: border-box;
+    border-radius: 0px;
+    background: var(--Sub-Color); 
+}
+
+::-webkit-scrollbar-thumb:hover 
+{
+    background: #777; 
+}
